@@ -5,7 +5,7 @@ const { Basket, BasketItem, Item } = require('../models');
 
 // Create a new basket
 router.post('/', authenticate, async (req, res) => {
-  try {
+    try {
     const basket = await Basket.create(req.body);
     res.status(201).json(basket);
   } catch (error) {
